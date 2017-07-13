@@ -1,0 +1,41 @@
+<web-app>
+   <servlet>
+       <servlet-name>first</servlet-name>
+	   <servlet-class>com.smc.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>first</servlet-name>
+		<url-pattern>/furl</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	  <servlet-name>second</servlet-name>
+	  <servlet-class>com.smc.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>second</servlet-name>
+	  <url-pattern>/surl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>third</servlet-name>
+	   <servlet-class>com.smc.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>third</servlet-name>
+		<url-pattern>/turl</url-pattern>
+	</servlet-mapping>
+	
+	<listener>
+	   <listener-class>com.smc.listener.ReqTimeAnalyzarListener</listener-class>
+	</listener>
+	<listener>
+	   <listener-class>com.smc.listener.SessionDurationAnalyzarListener</listener-class>
+	</listener>
+	<listener>
+	   <listener-class>com.smc.listener.WebAppMonitoringContextListener</listener-class>
+	</listener>
+	
+	<welcome-file-list>
+	   <welcome-file>personal.jsp </welcome-file>
+	 </welcome-file-list>
+</web-app>
